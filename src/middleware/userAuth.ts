@@ -15,6 +15,10 @@ export default async function (req: Request, res: Response, next: NextFunction) 
     const token = auth.split(" ")[1];
 
     try {
+        if (token === "undefined") {
+            throw new Error("Empty token");
+        }
+
         const decoded = jwt.verify(token, Deno.env.get("JWT_SECRET")!);
         const uid = String(decoded.sub);
         const { data, error } = await supabase

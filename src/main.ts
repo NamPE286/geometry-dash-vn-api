@@ -1,6 +1,7 @@
 // @ts-types="@types/express"
 import express from "express";
 import user from "#src/routers/user.ts";
+import level from "#src/routers/level.ts";
 import func from "#src/routers/func.ts";
 import userAuth from "#src/middleware/userAuth.ts";
 import { supabase } from "#src/supabase.ts";
@@ -35,6 +36,7 @@ app.get("/health", async (_req, res) => {
 app.use(userAuth);
 
 app.use("/user", user);
+app.use("/level", level);
 app.use("/func", func);
 
 app.listen(8000, () => {
