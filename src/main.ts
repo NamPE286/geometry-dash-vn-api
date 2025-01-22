@@ -3,6 +3,7 @@ import express from "express";
 import user from "#src/routers/user.ts";
 import func from "#src/routers/func.ts";
 import userAuth from "#src/middleware/userAuth.ts";
+import { supabase } from "#src/supabase.ts";
 
 const app = express();
 
@@ -15,10 +16,20 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get("/", (_req, res) => {
-    res.send({
+app.get("/health", async (_req, res) => {
+    const result = {
         timestamp: new Date(),
-    });
+        supabase: true,
+    };
+    const { error } = await supabase
+        .from("user_role")
+        .select("*");
+
+    if (error) {
+        result.supabase = false;
+    }
+
+    res.send(result);
 });
 
 app.use(userAuth);
