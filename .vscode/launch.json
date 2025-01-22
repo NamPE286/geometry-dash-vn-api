@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "request": "launch",
+
+            /* modified: descriptive name */
+            "name": "Debug tests",
+
+            /* modified: was generated as "pwa-node", but VS Code shows me
+        a diagnostic warning for that value: "Please use type node instead(2)" */
+            "type": "node",
+
+            /* disabled specific entrypoint */
+            // "program": "${workspaceFolder}/main.ts",
+
+            "cwd": "${workspaceFolder}",
+
+            /* modified: using deno process name from my PATH */
+            "runtimeExecutable": "deno",
+
+            "runtimeArgs": [
+                "run",
+                "-A",
+                "--inspect-brk",
+                "./src/main.ts"
+            ],
+            "attachSimplePort": 9229
+        }
+    ]
+}
