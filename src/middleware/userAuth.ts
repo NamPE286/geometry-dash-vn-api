@@ -28,6 +28,7 @@ export default async function (req: Request, res: Response, next: NextFunction) 
             .single();
 
         res.locals.user_id = uid;
+        res.locals.authType = "token";
 
         if (error) {
             if (req.path == "/user" && req.method == "POST") {
