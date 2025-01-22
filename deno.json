@@ -5,7 +5,7 @@
       "dev": "deno run --allow-all --watch src/main.ts",
       "dbcommit": "supabase db diff -s public -f local",
       "dbdump": "supabase db dump --local --data-only --schema public > ./supabase/seed.sql",
-      "typegen": "supabase gen types typescript --local > ./src/types/supabase.ts; cp ./src/types/supabase.ts ../gdvn-sdk/types/supabase.ts",
+      "typegen": "supabase gen types typescript --local > ./src/types/supabase.ts; cp ./src/types/supabase.ts ../gdvn-sdk/src/types/supabase.ts",
       "dbsync": "deno run dbdump; deno run dbcommit; supabase db reset; deno run typegen"
   },
   "imports": {
