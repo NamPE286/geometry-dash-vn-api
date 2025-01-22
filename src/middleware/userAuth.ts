@@ -15,7 +15,7 @@ export default async function (req: Request, res: Response, next: NextFunction) 
     const token = auth.split(" ")[1];
 
     try {
-        if (token === "undefined") {
+        if (token === "undefined" || token === undefined || token === "") {
             throw new Error("Empty token");
         }
 

@@ -28,6 +28,16 @@ INSERT INTO "public"."levels" ("id", "created_at", "name", "creator", "youtube_v
 
 
 --
+-- Data for Name: lists; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO "public"."lists" ("name", "description") VALUES
+	('demon', 'Hardest demon beaten by Vietnamese'),
+	('featured', 'Hardest demon created by Vietnamese'),
+	('challenge', 'Quick challenges to hone your skill');
+
+
+--
 -- Data for Name: level_rating; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
