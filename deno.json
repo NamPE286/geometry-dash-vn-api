@@ -1,0 +1,23 @@
+{
+  "name": "@nampe286/geometry-dash-vn-sdk",
+  "version": "0.0.10",
+  "license": "GPL-v3",
+  "exports": "./sdk/mod.ts",
+  "tasks": {
+      "dev": "deno run --allow-all --watch src/main.ts",
+      "dbcommit": "supabase db diff -s public -f local",
+      "dbdump": "supabase db dump --local --data-only --schema public > ./supabase/seed.sql",
+      "typegen": "supabase gen types typescript --local > ./src/types/supabase.ts",
+      "dbsync": "deno run dbdump; deno run dbcommit; supabase db reset; deno run typegen"
+  },
+  "imports": {
+      "#src/": "./src/",
+      "@supabase/supabase-js": "jsr:@supabase/supabase-js@^2.48.0",
+      "@types/express": "npm:@types/express@4.17.15",
+      "express": "npm:express@4.18.2"
+  },
+  "fmt": {
+      "indentWidth": 4,
+      "lineWidth": 100
+  }
+}
