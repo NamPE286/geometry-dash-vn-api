@@ -73,13 +73,6 @@ SELECT pg_catalog.setval('"public"."level_rating_id_seq"', 1, false);
 
 
 --
--- Name: levels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('"public"."levels_id_seq"', 1, false);
-
-
---
 -- PostgreSQL database dump complete
 --
 
