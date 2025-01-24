@@ -63,7 +63,8 @@ INSERT INTO "public"."user_role" ("name", "add_level", "modify_level", "delete_l
 --
 
 INSERT INTO "public"."users" ("user_id", "created_at", "name", "city", "province", "role", "is_hidden") VALUES
-	('ded6b269-a856-4a49-a1ae-d8837d50e350', '2025-01-18 09:56:19.965229+00', 'default', 'Hạ Long', 'Quảng Ninh', 'default', false);
+	('ded6b269-a856-4a49-a1ae-d8837d50e350', '2025-01-18 09:56:19.965229+00', 'default', 'Hạ Long', 'Quảng Ninh', 'default', false),
+	('fa49b543-083c-4577-958f-ca86a8e295bd', '2025-01-24 04:02:28.566346+00', 'default1', NULL, NULL, 'default', false);
 
 
 --
@@ -72,7 +73,8 @@ INSERT INTO "public"."users" ("user_id", "created_at", "name", "city", "province
 
 INSERT INTO "public"."records" ("created_at", "user_id", "level_id", "video_link", "progress") VALUES
 	('2025-01-19 18:23:15.798575+00', 'ded6b269-a856-4a49-a1ae-d8837d50e350', 52374843, 'https://www.youtube.com/watch?v=uCuSX3Y004E&pp=ygUKcHJpcyBtYWdpYw%3D%3D', 87),
-	('2025-01-19 18:23:58.679907+00', 'ded6b269-a856-4a49-a1ae-d8837d50e350', 71025973, 'https://www.youtube.com/watch?v=c7E-tgmFuzw&pp=ygUIcG9wIGluIDI%3D', 100);
+	('2025-01-19 18:23:58.679907+00', 'ded6b269-a856-4a49-a1ae-d8837d50e350', 71025973, 'https://www.youtube.com/watch?v=c7E-tgmFuzw&pp=ygUIcG9wIGluIDI%3D', 100),
+	('2025-01-24 04:03:13.240211+00', 'fa49b543-083c-4577-958f-ca86a8e295bd', 52374843, 'https://www.youtube.com/watch?v=7GJOBkIgWHc', 100);
 
 
 --
