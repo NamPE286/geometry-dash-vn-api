@@ -24,27 +24,8 @@ SET row_security = off;
 
 INSERT INTO "public"."levels" ("id", "created_at", "name", "creator", "youtube_video_id") VALUES
 	(71025973, '2025-01-18 10:25:33.965152+00', 'Oblivion', 'dice88 & more', 'bsWqS5QPhz8'),
-	(52374843, '2025-01-19 18:16:01.572288+00', 'Zodiac', 'Bianox and more', 'FX9paD5rRsM');
-
-
---
--- Data for Name: lists; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO "public"."lists" ("name", "description") VALUES
-	('demon', 'Hardest demon beaten by Vietnamese'),
-	('featured', 'Hardest demon created by Vietnamese'),
-	('challenge', 'Quick challenges to hone your skill');
-
-
---
--- Data for Name: level_rating; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO "public"."level_rating" ("id", "list", "rating", "min_progress") VALUES
-	(52374843, 'demon', 3000, 60),
-	(71025973, 'demon', 4100, 60),
-	(52374843, 'featured', 1000, 100);
+	(52374843, '2025-01-19 18:16:01.572288+00', 'Zodiac', 'Bianox and more', 'FX9paD5rRsM'),
+	(79484035, '2025-01-26 11:17:35.230536+00', 'The Moon Below', 'Onvil', '4JA0NXdo4Wc');
 
 
 --
@@ -64,7 +45,38 @@ INSERT INTO "public"."user_role" ("name", "add_level", "modify_level", "delete_l
 
 INSERT INTO "public"."users" ("user_id", "created_at", "name", "city", "province", "role", "is_hidden") VALUES
 	('ded6b269-a856-4a49-a1ae-d8837d50e350', '2025-01-18 09:56:19.965229+00', 'default', 'Hạ Long', 'Quảng Ninh', 'default', false),
-	('fa49b543-083c-4577-958f-ca86a8e295bd', '2025-01-24 04:02:28.566346+00', 'default1', NULL, NULL, 'default', false);
+	('fa49b543-083c-4577-958f-ca86a8e295bd', '2025-01-24 04:02:28.566346+00', 'default1', NULL, NULL, 'default', false),
+	('570eef3f-5510-4b72-94f7-b5d325a70d11', '2025-01-26 11:19:35.451648+00', 'Onvli', NULL, NULL, 'default', false);
+
+
+--
+-- Data for Name: level_creator; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO "public"."level_creator" ("level_id", "user_id", "is_decorator", "is_gameplay_maker", "part_end", "part_start") VALUES
+	(79484035, '570eef3f-5510-4b72-94f7-b5d325a70d11', true, true, 100, 0);
+
+
+--
+-- Data for Name: lists; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO "public"."lists" ("name", "description") VALUES
+	('demon', 'Hardest demon beaten by Vietnamese'),
+	('challenge', 'Quick challenges to hone your skill'),
+	('featured', 'Best levels made by Vietnamese');
+
+
+--
+-- Data for Name: level_rating; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO "public"."level_rating" ("id", "list", "rating", "min_progress") VALUES
+	(71025973, 'demon', 4100, 60),
+	(52374843, 'featured', 2, 100),
+	(79484035, 'featured', 2, 100),
+	(79484035, 'demon', 3000, 52),
+	(52374843, 'demon', 3500, 60);
 
 
 --
