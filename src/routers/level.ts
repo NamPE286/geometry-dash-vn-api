@@ -48,8 +48,9 @@ router.patch("/", async (req, res) => {
     res.status(200).send();
 });
 
-router.delete("/", async (req, res) => {
+router.delete("/:id", async (req, res) => {
     const { user } = res.locals;
+    const { id } = req.params;
 
     if (!user.user_role.delete_level) {
         res.status(403).send();
@@ -59,7 +60,7 @@ router.delete("/", async (req, res) => {
     const { error } = await supabase
         .from("levels")
         .delete()
-        .eq("id", req.body.id);
+        .eq("id", parseInt(id));
 
     if (error) {
         console.error(error);
