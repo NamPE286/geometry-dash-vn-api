@@ -22,7 +22,7 @@ SET row_security = off;
 -- Data for Name: levels; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO "public"."levels" ("id", "created_at", "name", "creator", "youtube_video_id") VALUES
+INSERT INTO "public"."levels" ("id", "created_at", "name", "creator_alt", "youtube_video_id") VALUES
 	(71025973, '2025-01-18 10:25:33.965152+00', 'Oblivion', 'dice88 & more', 'bsWqS5QPhz8'),
 	(52374843, '2025-01-19 18:16:01.572288+00', 'Zodiac', 'Bianox and more', 'FX9paD5rRsM'),
 	(79484035, '2025-01-26 11:17:35.230536+00', 'The Moon Below', 'Onvil', '4JA0NXdo4Wc');
