@@ -1,6 +1,5 @@
 {
   "license": "GPL-v3",
-  "exports": "./sdk/mod.ts",
   "tasks": {
       "dev": "deno run --allow-all --watch src/main.ts",
       "dbcommit": "supabase db diff -s public -f local",
