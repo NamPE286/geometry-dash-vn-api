@@ -83,10 +83,11 @@ INSERT INTO "public"."level_rating" ("id", "list", "rating", "min_progress") VAL
 -- Data for Name: records; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO "public"."records" ("created_at", "user_id", "level_id", "video_link", "progress") VALUES
-	('2025-01-19 18:23:15.798575+00', 'ded6b269-a856-4a49-a1ae-d8837d50e350', 52374843, 'https://www.youtube.com/watch?v=uCuSX3Y004E&pp=ygUKcHJpcyBtYWdpYw%3D%3D', 87),
-	('2025-01-19 18:23:58.679907+00', 'ded6b269-a856-4a49-a1ae-d8837d50e350', 71025973, 'https://www.youtube.com/watch?v=c7E-tgmFuzw&pp=ygUIcG9wIGluIDI%3D', 100),
-	('2025-01-24 04:03:13.240211+00', 'fa49b543-083c-4577-958f-ca86a8e295bd', 52374843, 'https://www.youtube.com/watch?v=7GJOBkIgWHc', 100);
+INSERT INTO "public"."records" ("created_at", "user_id", "level_id", "video_link", "progress", "reviewer_id", "status", "comment", "reviewer_note", "moderator_note") VALUES
+	('2025-01-19 18:23:15.798575+00', 'ded6b269-a856-4a49-a1ae-d8837d50e350', 52374843, 'https://www.youtube.com/watch?v=uCuSX3Y004E&pp=ygUKcHJpcyBtYWdpYw%3D%3D', 87, NULL, 1, NULL, NULL, NULL),
+	('2025-01-19 18:23:58.679907+00', 'ded6b269-a856-4a49-a1ae-d8837d50e350', 71025973, 'https://www.youtube.com/watch?v=c7E-tgmFuzw&pp=ygUIcG9wIGluIDI%3D', 100, NULL, 1, NULL, NULL, NULL),
+	('2025-01-26 13:48:25.821023+00', 'ded6b269-a856-4a49-a1ae-d8837d50e350', 79484035, 'https://www.youtube.com/watch?v=yJWaKc703jc', 100, NULL, 1, NULL, NULL, NULL),
+	('2025-01-24 04:03:13.240211+00', 'fa49b543-083c-4577-958f-ca86a8e295bd', 52374843, 'https://www.youtube.com/watch?v=7GJOBkIgWHc', 100, NULL, 1, NULL, NULL, NULL);
 
 
 --
